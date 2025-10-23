@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lovely Shop — О нас</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header small-hero">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Lovely<span>Shop</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html" class="active">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-btn" href="catalog.html">🛒 <span id="cart-count-about">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-card">
+      <h2>Немного о нас</h2>
+      <p>Мы — маленький уютный магазин, который создаёт красивые и добрые вещи. Наша миссия — дарить приятные эмоции и практичные вещи для дома и радости.</p>
+
+      <h3>Контакты</h3>
+      <p>Email: <a href="mailto:hello@lovelyshop.example">hello@lovelyshop.example</a></p>
+      <p>Телефон: +380 99 000 00 00</p>
+
+      <h3>Форма обратной связи</h3>
+      <form id="contactForm">
+        <label>Имя:<br><input type="text" id="cfName" required></label><br>
+        <label>Email:<br><input type="email" id="cfEmail" required></label><br>
+        <label>Сообщение:<br><textarea id="cfMsg" rows="4" required></textarea></label><br>
+        <button class="btn primary" type="submit">Отправить</button>
+      </form>
+      <p id="cfResult" class="muted"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>LovelyShop</strong> — уютные вещи с душой.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

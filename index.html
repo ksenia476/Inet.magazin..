@@ -1,12 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lovely Shop — Главная</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p> cfg
-    </p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Lovely<span>Shop</span></a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Поиск">🔍</button>
+        <a class="cart-btn" href="catalog.html" id="cartBtn">🛒 <span id="cart-count">0</span></a>
+      </div>
+    </div>
+    <div class="hero container">
+      <div class="hero-left">
+        <h1>Милые вещи для уютных людей</h1>
+        <p>Стильные футболки, кружки, кепки и аксессуары — с любовью и быстрым доставлением.</p>
+        <div class="hero-actions">
+          <a href="catalog.html" class="btn primary">Перейти в каталог</a>
+          <a href="about.html" class="btn ghost">Узнать больше</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=60" alt="Hero" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/100/ff6f91/fast-delivery.png" alt="">
+        <h3>Быстрая доставка</h3>
+        <p>Отправляем в течение 24 часов.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/100/ff6f91/like.png" alt="">
+        <h3>Качество</h3>
+        <p>Тщательная проверка каждого товара.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/100/ff6f91/secured-letter.png" alt="">
+        <h3>Поддержка</h3>
+        <p>Готовы помочь в любой момент.</p>
+      </div>
+    </section>
+
+    <section class="best-sellers">
+      <h2>Хиты продаж</h2>
+      <div class="cards" id="bestsellers">
+        <!-- Заполняется скриптом (те же товары, что и в каталоге) -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>LovelyShop</strong> — уютные вещи с душой.
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="YouTube">▶️</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      © 2025 LovelyShop — все права защищены
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

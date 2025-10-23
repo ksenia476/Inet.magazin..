@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lovely Shop — Каталог</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header small-hero">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Lovely<span>Shop</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html" class="active">Каталог</a>
+        <a href="about.html">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <input id="searchInput" class="search-input" placeholder="Поиск по товарам...">
+        <a class="cart-btn" href="#cart" id="cartBtnTop">🛒 <span id="cart-count-top">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="filters">
+      <h3>Фильтры</h3>
+      <label>
+        Цена до:
+        <input type="range" id="priceRange" min="100" max="1000" value="1000">
+        <span id="priceVal">1000 грн</span>
+      </label>
+
+      <h4>Категория</h4>
+      <div>
+        <label><input type="checkbox" class="cat-filter" value="Футболки" checked> Футболки</label><br>
+        <label><input type="checkbox" class="cat-filter" value="Кепки" checked> Кепки</label><br>
+        <label><input type="checkbox" class="cat-filter" value="Кружки" checked> Кружки</label>
+      </div>
+
+      <button class="btn primary" id="applyFilters">Применить</button>
+      <button class="btn ghost" id="resetFilters">Сбросить</button>
+    </aside>
+
+    <section class="catalog">
+      <div class="catalog-top">
+        <h2>Каталог товаров</h2>
+        <div class="catalog-actions">
+          <select id="sortSelect">
+            <option value="default">Сортировать</option>
+            <option value="price-asc">Цена ↑</option>
+            <option value="price-desc">Цена ↓</option>
+            <option value="name">Название A→Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cards" id="catalogList">
+        <!-- товары генерируются скриптом -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>LovelyShop</strong> — уютные вещи с душой.
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="YouTube">▶️</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
