@@ -17,7 +17,7 @@
         <a href="about.html" class="active">О нас</a>
       </nav>
       <div class="header-actions">
-        <a class="cart-btn" href="catalog.html">🛒 <span id="cart-count-about">0</span></a>
+        <a class="cart-btn" href="#" id="cartBtn">🛒 <span id="cart-count">0</span></a>
       </div>
     </div>
   </header>
@@ -44,11 +44,24 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>LovelyShop</strong> — уютные вещи с душой.
-      </div>
+      <div><strong>LovelyShop</strong> — уютные вещи с душой.</div>
     </div>
   </footer>
+
+  <!-- Панель корзины и overlay -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Корзина</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p>Корзина пуста</p></div>
+    <div class="cart-footer">
+      <p>Итого: <span id="cartTotal">0 грн</span></p>
+      <button id="checkoutBtn" class="btn primary">Оформить заказ</button>
+      <button id="clearCartBtn" class="btn ghost">Очистить</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
 
   <script src="script.js"></script>
 </body>

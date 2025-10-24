@@ -17,13 +17,12 @@
         <a href="about.html">О нас</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-btn" id="searchBtn" aria-label="Поиск">🔍</button>
-        <a class="cart-btn" href="catalog.html" id="cartBtn">🛒 <span id="cart-count">0</span></a>
+        <a class="cart-btn" href="#" id="cartBtn">🛒 <span id="cart-count">0</span></a>
       </div>
     </div>
     <div class="hero container">
       <div class="hero-left">
-        <h1>Милые вещи для уютных людей</h1>
+        <h1>Милые вещи для уюта и комфорта</h1>
         <p>Стильные футболки, кружки, кепки и аксессуары — с любовью и быстрым доставлением.</p>
         <div class="hero-actions">
           <a href="catalog.html" class="btn primary">Перейти в каталог</a>
@@ -39,17 +38,17 @@
   <main class="container">
     <section class="features">
       <div class="feature">
-        <img src="https://img.icons8.com/ios-filled/100/ff6f91/fast-delivery.png" alt="">
+        <img src="images/delivery.jpg" alt="">
         <h3>Быстрая доставка</h3>
         <p>Отправляем в течение 24 часов.</p>
       </div>
       <div class="feature">
-        <img src="https://img.icons8.com/ios-filled/100/ff6f91/like.png" alt="">
+        <img src="images/heart.jpg" alt="">
         <h3>Качество</h3>
         <p>Тщательная проверка каждого товара.</p>
       </div>
       <div class="feature">
-        <img src="https://img.icons8.com/ios-filled/100/ff6f91/secured-letter.png" alt="">
+        <img src="images/contact.jpg" alt="">
         <h3>Поддержка</h3>
         <p>Готовы помочь в любой момент.</p>
       </div>
@@ -57,27 +56,35 @@
 
     <section class="best-sellers">
       <h2>Хиты продаж</h2>
-      <div class="cards" id="bestsellers">
-        <!-- Заполняется скриптом (те же товары, что и в каталоге) -->
-      </div>
+      <div class="cards" id="bestsellers"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>LovelyShop</strong> — уютные вещи с душой.
-      </div>
+      <div><strong>LovelyShop</strong> — уютные вещи с душой.</div>
       <div class="socials">
         <a href="#" aria-label="Instagram">📷</a>
         <a href="#" aria-label="YouTube">▶️</a>
         <a href="#" aria-label="Facebook">f</a>
       </div>
     </div>
-    <div class="container footer-bottom">
-      © 2025 LovelyShop — все права защищены
-    </div>
   </footer>
+
+  <!-- Панель корзины и overlay -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Корзина</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p>Корзина пуста</p></div>
+    <div class="cart-footer">
+      <p>Итого: <span id="cartTotal">0 грн</span></p>
+      <button id="checkoutBtn" class="btn primary">Оформить заказ</button>
+      <button id="clearCartBtn" class="btn ghost">Очистить</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
 
   <script src="script.js"></script>
 </body>

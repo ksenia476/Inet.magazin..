@@ -18,7 +18,7 @@
       </nav>
       <div class="header-actions">
         <input id="searchInput" class="search-input" placeholder="Поиск по товарам...">
-        <a class="cart-btn" href="#cart" id="cartBtnTop">🛒 <span id="cart-count-top">0</span></a>
+        <a class="cart-btn" href="#" id="cartBtn">🛒 <span id="cart-count">0</span></a>
       </div>
     </div>
   </header>
@@ -31,14 +31,12 @@
         <input type="range" id="priceRange" min="100" max="1000" value="1000">
         <span id="priceVal">1000 грн</span>
       </label>
-
       <h4>Категория</h4>
       <div>
         <label><input type="checkbox" class="cat-filter" value="Футболки" checked> Футболки</label><br>
         <label><input type="checkbox" class="cat-filter" value="Кепки" checked> Кепки</label><br>
         <label><input type="checkbox" class="cat-filter" value="Кружки" checked> Кружки</label>
       </div>
-
       <button class="btn primary" id="applyFilters">Применить</button>
       <button class="btn ghost" id="resetFilters">Сбросить</button>
     </aside>
@@ -55,18 +53,13 @@
           </select>
         </div>
       </div>
-
-      <div class="cards" id="catalogList">
-        <!-- товары генерируются скриптом -->
-      </div>
+      <div class="cards" id="catalogList"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>LovelyShop</strong> — уютные вещи с душой.
-      </div>
+      <div><strong>LovelyShop</strong> — уютные вещи с душой.</div>
       <div class="socials">
         <a href="#" aria-label="Instagram">📷</a>
         <a href="#" aria-label="YouTube">▶️</a>
@@ -74,6 +67,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- Панель корзины и overlay (общая) -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Корзина</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p>Корзина пуста</p></div>
+    <div class="cart-footer">
+      <p>Итого: <span id="cartTotal">0 грн</span></p>
+      <button id="checkoutBtn" class="btn primary">Оформить заказ</button>
+      <button id="clearCartBtn" class="btn ghost">Очистить</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
 
   <script src="script.js"></script>
 </body>
