@@ -1,11 +1,11 @@
 /* ===== Данные товаров ===== */
 const PRODUCTS = [
-  { id:1, title:'Футболка Minecraft', price:350, category:'Футболки', img:'https://via.placeholder.com/600x400/ffb6c1/000000?text=T-shirt' },
-  { id:2, title:'Кепка Lovely', price:250, category:'Кепки', img:'https://via.placeholder.com/600x400/ffd1dc/000000?text=Cap' },
-  { id:3, title:'Игровая кружка', price:200, category:'Кружки', img:'https://via.placeholder.com/600x400/ffc0cb/000000?text=Mug' },
-  { id:4, title:'Толстовка Cozy', price:700, category:'Футболки', img:'https://via.placeholder.com/600x400/ffc9de/000000?text=Hoodie' },
-  { id:5, title:'Бейсболка Sun', price:300, category:'Кепки', img:'https://via.placeholder.com/600x400/ffe4e6/000000?text=Cap2' },
-  { id:6, title:'Термокружка', price:450, category:'Кружки', img:'https://via.placeholder.com/600x400/ffdfe6/000000?text=Thermo' }
+  { id:1, title:'Футболка Minecraft', price:350, category:'Футболки', img:'images/futbolka.jpg' },
+  { id:2, title:'Кепка Lovely', price:250, category:'Кепки', img:'images/kepka.jpg' },
+  { id:3, title:'Игровая кружка', price:200, category:'Кружки', img:'images/cahka.jpg' },
+  { id:4, title:'Кофта', price:700, category:'Футболки', img:'images/kofta.jpg' },
+  { id:5, title:'Бейсболка Sun', price:300, category:'Кепки', img:'images/kepka 2.jpg' },
+  { id:6, title:'Термокружка', price:450, category:'Кружки', img:'images/gdhdtj.jpg' }
 ];
 
 /* ===== Корзина ===== */
