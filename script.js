@@ -37,22 +37,39 @@ function renderCartPanel(){
 function clearCart(){ CART=[]; saveCart(); renderCartPanel(); renderCatalog(); }
 
 /* ===== Каталог ===== */
-function renderCatalogList(listEl, products){
-  if(!listEl) return; listEl.innerHTML='';
-  products.forEach(p=>{
-    const card=document.createElement('article'); card.className='card';
-    card.innerHTML=`
+function renderCatalogList(listEl, products) {
+  if (!listEl) return;
+  listEl.innerHTML = '';
+
+  products.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.innerHTML = `
       <img src="${p.img}" alt="${p.title}">
       <h3>${p.title}</h3>
       <p>${p.price} грн</p>
       <div class="card-actions">
-        <button class="btn primary" data-id="${p.id}">В корзину</button>
+        <button class="btn primary add-to-cart" data-id="${p.id}">В корзину</button>
       </div>
     `;
+
+    // 👉 Добавляем переход на страницу товара при клике на карточку
+    card.addEventListener('click', e => {
+      // если клик был не по кнопке "В корзину"
+      if (!e.target.classList.contains('add-to-cart')) {
+        window.location.href = `product.html?id=${p.id}`;
+      }
+    });
+
     listEl.appendChild(card);
   });
-  listEl.querySelectorAll('.btn').forEach(btn=>btn.addEventListener('click',()=>addToCart(+btn.dataset.id)));
+
+  // 👉 Кнопки "В корзину" остаются рабочими
+  listEl.querySelectorAll('.add-to-cart').forEach(btn =>
+    btn.addEventListener('click', () => addToCart(+btn.dataset.id))
+  );
 }
+
 
 /* ===== Фильтры и поиск ===== */
 function applyFilters(){
@@ -114,3 +131,37 @@ document.getElementById('contactForm')?.addEventListener('submit',e=>{
 updateCartCounters();
 renderCartPanel();
 applyFilters();
+
+// ===== Страница товара =====
+if (window.location.pathname.endsWith('product.html')) {
+  const params = new URLSearchParams(window.location.search);
+  const productId = +params.get('id');
+  const product = PRODUCTS.find(p => p.id === productId);
+
+  const container = document.getElementById('productDetails');
+  if (product && container) {
+    container.innerHTML = `
+      <div class="product-card">
+        <img src="${product.img}" alt="${product.title}" class="product-image">
+        <div class="product-info">
+          <h2>${product.title}</h2>
+          <p class="product-price">${product.price} грн</p>
+          <p class="product-desc">Эта ${product.category.toLowerCase()} создана с любовью. Отличное качество и стильный дизайн.</p>
+          ${product.category === 'Футболки' ? `
+            <div class="sizes">
+              <label>Размер:</label>
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>` : ''}
+          <button class="btn primary" onclick="addToCart(${product.id})">Добавить в корзину</button>
+        </div>
+      </div>
+    `;
+  } else if (container) {
+    container.innerHTML = '<p>Товар не найден 😢</p>';
+  }
+}
