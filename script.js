@@ -2,11 +2,12 @@
 const PRODUCTS = [
   { id: 1, title: 'Футболка Minecraft', price: 350, category: 'Футболки', img: 'images/futbolka.jpg' },
   { id: 2, title: 'Кепка Lovely', price: 250, category: 'Кепки', img: 'images/kepka.jpg' },
-  { id: 3, title: 'Игровая кружка', price: 200, category: 'Кружки', img: 'images/cahka.jpg' },
+  { id: 3, title: 'Ігрова чашка', price: 200, category: 'Кружки', img: 'images/cahka.jpg' },
   { id: 4, title: 'Кофта', price: 700, category: 'Футболки', img: 'images/kofta.jpg' },
-  { id: 5, title: 'Бейсболка Sun', price: 300, category: 'Кепки', img: 'images/kepka 2.jpg' },
+  { id: 5, title: 'Бейзболка', price: 300, category: 'Кепки', img: 'images/kepka 2.jpg' },
   { id: 6, title: 'Термокружка', price: 450, category: 'Кружки', img: 'images/gdhdtj.jpg' }
 ];
+
 
 /* ===== Корзина ===== */
 let CART = JSON.parse(localStorage.getItem('lovely_cart') || '[]');
@@ -66,7 +67,7 @@ function clearCart() {
   CART = [];
   saveCart();
   renderCartPanel();
-  renderCatalog();
+  renderCatalogList();
 }
 
 /* ===== Каталог ===== */
@@ -186,7 +187,7 @@ document.getElementById('contactForm')?.addEventListener('submit', e => {
   const email = document.getElementById('cfEmail').value;
   const msg = document.getElementById('cfMsg').value;
 
-  document.getElementById('cfResult').textContent = `Спасибо, ${name}! Мы получили ваше сообщение.`;
+  document.getElementById('cfResult').textContent = `Дякую, ${name}! Ми отримали Ваше повідомлення.`;
   e.target.reset();
 });
 
@@ -211,11 +212,11 @@ if (window.location.pathname.endsWith('product.html')) {
           <h2>${product.title}</h2>
           <p class="product-price">${product.price} грн</p>
           <p class="product-desc">
-            Эта ${product.category.toLowerCase()} создана с любовью. Отличное качество и стильный дизайн.
+            Эта ${product.category.toLowerCase()} сСтвопена з любов'ю. Відмінна якість і стильний дизайн
           </p>
-          ${product.category === 'Футболки' ? `
+          ${product.category === 'Футболкі' ? `
             <div class="sizes">
-              <label>Размер:</label>
+              <label>Розмір:</label>
               <select>
                 <option>S</option>
                 <option>M</option>
@@ -223,11 +224,11 @@ if (window.location.pathname.endsWith('product.html')) {
                 <option>XL</option>
               </select>
             </div>` : ''}
-          <button class="btn primary" onclick="addToCart(${product.id})">Добавить в корзину</button>
+          <button class="btn primary" onclick="addToCart(${product.id})">Додати в кошику</button>
         </div>
       </div>
     `;
   } else if (container) {
-    container.innerHTML = '<p>Товар не найден 😢</p>';
+    container.innerHTML = '<p>Товар не знайден 😢</p>';
   }
 }
