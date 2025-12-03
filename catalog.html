@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,12 +12,12 @@
     <div class="container header-inner">
       <a class="logo" href="index.html">Lovely<span>Shop</span></a>
       <nav class="main-nav">
-        <a href="index.html">Главная</a>
+        <a href="index.html">Головна</a>
         <a href="catalog.html" class="active">Каталог</a>
-        <a href="about.html">О нас</a>
+        <a href="about.html">Про нас</a>
       </nav>
       <div class="header-actions">
-        <input id="searchInput" class="search-input" placeholder="Поиск по товарам...">
+        <input id="searchInput" class="search-input" placeholder="Пошук товарів...">
         <a class="cart-btn" href="#" id="cartBtn">🛒 <span id="cart-count">0</span></a>
       </div>
     </div>
@@ -25,90 +25,84 @@
 
   <main class="container">
     <aside class="filters">
-      <h3>Фильтры</h3>
+      <h3>Фільтри</h3>
       <label>
-        Цена до:
+        Ціна до:
         <input type="range" id="priceRange" min="100" max="1000" value="1000">
         <span id="priceVal">1000 грн</span>
       </label>
-      <h4>Категория</h4>
+      <h4>Категорія</h4>
       <div>
         <label><input type="checkbox" class="cat-filter" value="Футболки" checked> Футболки</label><br>
         <label><input type="checkbox" class="cat-filter" value="Кепки" checked> Кепки</label><br>
         <label><input type="checkbox" class="cat-filter" value="Кружки" checked> Кружки</label>
       </div>
-      <button class="btn primary" id="applyFilters">Применить</button>
-      <button class="btn ghost" id="resetFilters">Сбросить</button>
+      <button class="btn primary" id="applyFilters">Застосувати</button>
+      <button class="btn ghost" id="resetFilters">Скинути</button>
     </aside>
 
     <section class="catalog">
       <div class="catalog-top">
-        <h2>Каталог товаров</h2>
+        <h2>Каталог товарів</h2>
         <div class="catalog-actions">
           <select id="sortSelect">
-            <option value="default">Сортировать</option>
-            <option value="price-asc">Цена ↑</option>
-            <option value="price-desc">Цена ↓</option>
-            <option value="name">Название A→Z</option>
+            <option value="default">Сортування</option>
+            <option value="price-asc">Ціна ↑</option>
+            <option value="price-desc">Ціна ↓</option>
+            <option value="name">Назва A→Z</option>
           </select>
         </div>
       </div>
       <div class="cards" id="catalogList"></div>
     </section>
   </main>
+
 <footer class="footer">
   <div class="footer-container">
-    <!-- Блок 1 — бренд -->
+
     <div class="footer-col brand">
       <h2>LovelyShop</h2>
-      <p>Магазин стильной одежды и аксессуаров, созданных с любовью. Мы вдохновляем, чтобы каждый день был особенным 💖</p>
+      <p>Магазин стильного одягу та аксесуарів, створених з любов’ю. Ми надихаємо, щоб кожен день був особливим 💖</p>
+
       <div class="footer-socials">
-       <!-- Блок соцсетей с обычными картинками -->
-<div class="footer-socials">
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/lovelys.shop.ua?igsh=NmE5Z2d2OThoZHB0&utm_source=qr" target="_blank" aria-label="Instagram">
-    <img src="images/inst.png" alt="Instagram" width="70" height="70">
-  </a>
+        <a href="https://www.instagram.com/lovelys.shop.ua?igsh=NmE5Z2d2OThoZHB0&utm_source=qr" target="_blank" aria-label="Instagram">
+          <img src="images/inst.png" alt="Instagram" width="70" height="70">
+        </a>
 
-  <!-- YouTube -->
-  <a href="https://youtube.com/твоя_ссылка" target="_blank" aria-label="YouTube">
-    <img src="images/YouTube.png" alt="YouTube" width="70" height="70">
-  </a>
+        <a href="https://youtube.com/твоя_ссылка" target="_blank" aria-label="YouTube">
+          <img src="images/YouTube.png" alt="YouTube" width="70" height="70">
+        </a>
 
-  <!-- Telegram -->
-  <a href="https://t.me/твоя_ссылка" target="_blank" aria-label="Telegram">
-    <img src="images/Tg.png" alt="Telegram" width="50" height="50">
-  </a>
-</div>
+        <a href="https://t.me/твоя_ссылка" target="_blank" aria-label="Telegram">
+          <img src="images/Tg.png" alt="Telegram" width="50" height="50">
+        </a>
+      </div>
+    </div>
 
-
-    <!-- Блок 2 -->
     <div class="footer-col">
-      <h3>Компания</h3>
+      <h3>Компанія</h3>
       <ul>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Карьера</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Новини</a></li>
+        <li><a href="#">Кар’єра</a></li>
+        <li><a href="#">Контакти</a></li>
       </ul>
     </div>
 
-    <!-- Блок 3 -->
     <div class="footer-col">
-      <h3>Помощь</h3>
+      <h3>Допомога</h3>
       <ul>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">Возврат</a></li>
+        <li><a href="#">Доставка та оплата</a></li>
+        <li><a href="#">Повернення</a></li>
         <li><a href="#">FAQ</a></li>
-        <li><a href="#">Поддержка</a></li>
+        <li><a href="#">Підтримка</a></li>
       </ul>
     </div>
 
-    <!-- Блок 4 -->
     <div class="footer-col">
-      <h3>Контакты</h3>
+      <h3>Контакти</h3>
       <ul>
-        <li>📍 Киев, Украина</li>
+        <li>📍 Київ, Україна</li>
         <li>📞 +380 (97) 123-45-67</li>
         <li>✉️ support@lovelyshop.ua</li>
       </ul>
@@ -116,21 +110,20 @@
   </div>
 
   <div class="footer-bottom">
-    <p> LovelyShop</p>
+    <p>LovelyShop</p>
   </div>
 </footer>
 
-  <!-- Панель корзины и overlay -->
   <div class="cart-panel" id="cartPanel">
     <div class="cart-header">
-      <h3>Корзина</h3>
+      <h3>Кошик</h3>
       <button id="closeCart">✕</button>
     </div>
-    <div class="cart-items" id="cartItems"><p>Корзина пуста</p></div>
+    <div class="cart-items" id="cartItems"><p>Кошик порожній</p></div>
     <div class="cart-footer">
-      <p>Итого: <span id="cartTotal">0 грн</span></p>
-      <button id="checkoutBtn" class="btn primary">Оформить заказ</button>
-      <button id="clearCartBtn" class="btn ghost">Очистить</button>
+      <p>Разом: <span id="cartTotal">0 грн</span></p>
+      <button id="checkoutBtn" class="btn primary">Оформити замовлення</button>
+      <button id="clearCartBtn" class="btn ghost">Очистити</button>
     </div>
   </div>
   <div class="cart-overlay" id="cartOverlay"></div>
