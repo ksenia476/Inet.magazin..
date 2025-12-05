@@ -212,9 +212,9 @@ if (window.location.pathname.endsWith('product.html')) {
           <h2>${product.title}</h2>
           <p class="product-price">${product.price} грн</p>
           <p class="product-desc">
-            Эта ${product.category.toLowerCase()} сСтвопена з любов'ю. Відмінна якість і стильний дизайн
+            Эта ${product.category.toLowerCase()} Ствопена з любов'ю. Відмінна якість і стильний дизайн
           </p>
-          ${product.category === 'Футболкі' ? `
+          ${product.category === 'Футболки' ? `
             <div class="sizes">
               <label>Розмір:</label>
               <select>
