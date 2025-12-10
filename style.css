@@ -510,44 +510,4 @@ body {
   padding-top: 20px;
   font-size: 14px;
   color: #555;
-}.filters {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 280px;           
-  padding: 12px 15px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  background: var(--card);
-  font-size: 14px;
-
-  
-  border: 2px ; 
-  border-radius: 12px;            
 }
-.filters:hover {
-  border-color: var(--accent-2); 
-  box-shadow: 0 4px 12px rgba(255,111,145,0.3);
-  transition: 0.3s;
-}
-.filters {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 280px;           
-  padding: 12px 15px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  background: var(--card);
-  font-size: 14px;
-
-  
-  border: 2px solid #f5cbdb; 
-  border-radius: 12px;            
-}
-.filters:hover {
-  border-color: var(--accent-2);
-  box-shadow: 0 4px 12px rgba(255,111,145,0.3);
-  transition: 0.3s;
-}
-
