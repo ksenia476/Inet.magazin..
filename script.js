@@ -105,6 +105,9 @@ function renderCatalogList(listEl, products) {
 
 /* ===== Фильтры и поиск ===== */
 function applyFilters() {
+  const list = document.getElementById('catalogList');
+  if (!list) return; // якщо це index.html — не виконуємо фільтрацію
+
   let filtered = PRODUCTS.slice();
 
   const priceVal = document.getElementById('priceRange')?.value;
@@ -116,11 +119,9 @@ function applyFilters() {
   const searchVal = document.getElementById('searchInput')?.value.toLowerCase();
   if (searchVal) filtered = filtered.filter(p => p.title.toLowerCase().includes(searchVal));
 
-  renderCatalogList(
-    document.getElementById('catalogList') || document.getElementById('bestsellers'),
-    filtered
-  );
+  renderCatalogList(list, filtered);
 }
+
 
 /* ===== Сортировка ===== */
 document.getElementById('sortSelect')?.addEventListener('change', e => {
@@ -231,4 +232,22 @@ if (window.location.pathname.endsWith('product.html')) {
   } else if (container) {
     container.innerHTML = '<p>Товар не знайден 😢</p>';
   }
+}
+/* ===== Хіти продажу на головній ===== */
+function renderBestSellers() {
+  const best = PRODUCTS.slice(0, 5); // в хіти 5 товара
+  const box = document.getElementById('bestsellers');
+  if (!box) return;
+
+  renderCatalogList(box, best);
+}
+updateCartCounters();
+renderCartPanel();
+
+if (document.getElementById('bestsellers')) {
+  renderBestSellers(); // головна сторінка
+}
+
+if (document.getElementById('catalogList')) {
+  applyFilters(); // каталог
 }
