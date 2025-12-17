@@ -166,7 +166,10 @@ cartOverlay?.addEventListener('click', () => {
 });
 
 document.getElementById('clearCartBtn')?.addEventListener('click', clearCart);
-document.getElementById('checkoutBtn')?.addEventListener('click', () => alert('Спасибо за заказ!'));
+document.getElementById('checkoutBtn')
+  ?.addEventListener('click', () => {
+    window.location.href = 'checkout.html';
+  });
 
 /* ===== Search & Filters ===== */
 document.getElementById('applyFilters')?.addEventListener('click', applyFilters);

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Оформлення замовлення</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="checkout-page">
+
+  <!-- ЛЕВО -->
+  <div class="checkout-left">
+
+    <!-- ШАГ 1 -->
+    <div class="checkout-box active" id="step1">
+      <h3 class="checkout-title"><span>1</span> Контактні дані</h3>
+
+      <label>Телефон *</label>
+      <input id="phone" type="tel" placeholder="+380 (__) ___ __ __">
+
+      <label>Прізвище *</label>
+      <input id="surname" type="text" placeholder="Введіть прізвище">
+
+      <label>Ім'я *</label>
+      <input id="name" type="text" placeholder="Введіть ім'я">
+
+      <button class="checkout-next" onclick="validateContacts()">
+        Продовжити
+      </button>
+    </div>
+
+    <!-- ШАГ 2 -->
+    <div class="checkout-box" id="step2">
+      <h3 class="checkout-title"><span>2</span> Доставка</h3>
+
+      <label>Населений пункт *</label>
+      <select>
+        <option>Одеса</option>
+        <option>Київ</option>
+        <option>Львів</option>
+        <option>Харків</option>
+      </select>
+
+      <button class="order-btn" onclick="finishOrder()">
+        Оформити замовлення
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ПРАВО -->
+  <div class="checkout-right">
+    <div class="checkout-box order-summary">
+      <h4>Замовлення <span id="orderCount"></span></h4>
+
+      <div id="orderItems"></div>
+
+      <hr>
+
+      <div class="order-total">
+        <span>До оплати:</span>
+        <strong id="orderTotal"></strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>
