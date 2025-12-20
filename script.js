@@ -254,3 +254,4 @@ if (document.getElementById('bestsellers')) {
 if (document.getElementById('catalogList')) {
   applyFilters(); // каталог
 }
+

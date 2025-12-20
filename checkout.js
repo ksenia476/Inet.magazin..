@@ -1,3 +1,4 @@
+
 // ===== Корзина =====
 const CART = JSON.parse(localStorage.getItem('lovely_cart') || '[]') || [];
 
