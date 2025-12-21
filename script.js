@@ -5,8 +5,26 @@ const PRODUCTS = [
   { id: 3, title: 'Ігрова чашка', price: 200, category: 'Кружки', img: 'images/cahka.jpg' },
   { id: 4, title: 'Кофта', price: 700, category: 'Футболки', img: 'images/kofta.jpg' },
   { id: 5, title: 'Бейзболка', price: 300, category: 'Кепки', img: 'images/kepka 2.jpg' },
-  { id: 6, title: 'Термокружка', price: 450, category: 'Кружки', img: 'images/gdhdtj.jpg' }
+  { id: 6, title: 'Термокружка', price: 450, category: 'Кружки', img: 'images/gdhdtj.jpg' },
+  { id: 7, title: 'Футболка Anime', price: 380, category: 'Футболки', img: 'images/futbolka2.jpg' },
+  { id: 8, title: 'Футболка Street', price: 420, category: 'Футболки', img: 'images/futbolka3.jpg' },
+  { id: 9, title: 'Худі Lovely', price: 850, category: 'Футболки', img: 'images/hudi.jpg' },
+
+  { id: 10, title: 'Кепка Urban', price: 280, category: 'Кепки', img: 'images/kepka3.jpg' },
+  { id: 11, title: 'Кепка Sport', price: 260, category: 'Кепки', img: 'images/kepka4.jpg' },
+
+  { id: 12, title: 'Кружка Lovely Pink', price: 220, category: 'Кружки', img: 'images/cup1.jpg' },
+  { id: 13, title: 'Кружка Gamer', price: 240, category: 'Кружки', img: 'images/cup2.jpg' },
+  { id: 14, title: 'Кружка Minimal', price: 210, category: 'Кружки', img: 'images/cup3.jpg' },
+
+  /* ===== Штани ===== */
+  { id: 15, title: 'Штани Classic', price: 600, category: 'Штани', img: 'images/pants1.jpg' },
+  { id: 16, title: 'Джинси Baggy', price: 680, category: 'Штани', img: 'images/pants2.jpg' },
+  { id: 17, title: 'Штани Sport', price: 720, category: 'Штани', img: 'images/pants3.jpg' },
+  { id: 18, title: 'Штани Oversize', price: 750, category: 'Штани', img: 'images/pants4.jpg' },
+  { id: 19, title: 'Джинси Cargo', price: 800, category: 'Штани', img: 'images/pants5.jpg' }
 ];
+
 
 
 /* ===== Корзина ===== */
