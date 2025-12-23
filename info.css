@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #ffffff; /* как у каталога */
+  color: #e6a2c1;
+  overflow-x: hidden;
+}
+
+/* 🌸 очень нежный фон с цветочками */
+body::before,
+body::after {
+  content: "🌸";
+  position: fixed;
+  font-size: 140px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+body::before {
+  top: 80px;
+  left: 40px;
+}
+
+body::after {
+  bottom: 80px;
+  right: 40px;
+}
+
+/* ===== Верхняя панель ===== */
+.top-panel {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffb8e0; /* как футер */
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f9bbd2;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c46a8b;
+}
+
+.top-panel nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #f4448b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.top-panel nav a:hover {
+  background: #fd78a2;
+  color: #fff;
+}
+
+.home-btn {
+  background: #ff8fb5;
+  color: #fff !important;
+}
+
+/* ===== Контент ===== */
+.content {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ===== Блоки ===== */
+section {
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 40px 45px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(224, 123, 157, 0.15);
+  position: relative;
+}
+
+/* маленький цветочек как акцент */
+section::after {
+  content: "🌷";
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  opacity: 0.25;
+}
+
+/* Заголовки */
+section h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+  color: #ffa3c5;
+}
+
+/* Текст */
+section p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  color: #6d5560;
+}
+
+/* Выделения */
+section b {
+  color: #e07b9d;
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 30px 25px;
+  }
+
+  .top-panel {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
