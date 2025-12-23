@@ -100,7 +100,7 @@ body {
   z-index: 1002;
 }
 
-/* ===== Герой ===== */
+/* =====  ===== */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -544,33 +544,52 @@ body {
   color: #777;
 }
 
-/* ===== Адаптив ===== */
-@media(max-width:900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-  .hero-right img {
-    max-width: 100%;
-  }
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-  .feature {
-    max-width: 320px;
-  }
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .checkout-page {
-    grid-template-columns: 1fr;
-  }
-  .product-card {
-    flex-direction: column;
-    align-items: center;
-  }
+.filters {
+  width: 420px;               /* ← ВАЖНО */
+  padding: 12px 18px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
+
+.back-home-btn {
+  display: inline-block;
+  background-color: #ff6f91;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px; /* отступ от стенок страницы */
+  transition: background-color 0.3s;
+}
+
+.back-home-btn:hover {
+  background-color: #ff85a3;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+ background: linear-gradient(90deg, var(--accent), var(--accent-2));/* розовый фон */
+  color: rgb(255, 255, 255);            /* белый текст */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sort-select:hover,
+.sort-select:focus {
+  background-color: rgb(240, 140, 140);  /* светлее при наведении */
+  outline: none;
+}
+
+.catalog-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+

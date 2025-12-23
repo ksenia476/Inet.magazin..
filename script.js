@@ -218,6 +218,7 @@ renderCartPanel();
 applyFilters();
 
 /* ===== Страница товара ===== */
+// Страница товара
 if (window.location.pathname.endsWith('product.html')) {
   const params = new URLSearchParams(window.location.search);
   const productId = +params.get('id');
@@ -227,7 +228,7 @@ if (window.location.pathname.endsWith('product.html')) {
 
   if (product && container) {
     container.innerHTML = `
-      <div class="product-card">
+      <div class="product-card" id="productCard">
         <img src="${product.img}" alt="${product.title}" class="product-image">
         <div class="product-info">
           <h2>${product.title}</h2>
@@ -235,7 +236,7 @@ if (window.location.pathname.endsWith('product.html')) {
           <p class="product-desc">
             Ці ${product.category.toLowerCase()} створені з любов'ю. Відмінна якість і стильний дизайн
           </p>
-          ${product.category === 'Футболки', 'Штани' ? `
+          ${['Футболки','Штани'].includes(product.category) ? `
             <div class="sizes">
               <label>Розмір:</label>
               <select>
@@ -245,14 +246,21 @@ if (window.location.pathname.endsWith('product.html')) {
                 <option>XL</option>
               </select>
             </div>` : ''}
-          <button class="btn primary" onclick="addToCart(${product.id})">Додати в кошику</button>
+          <button class="btn primary" onclick="addToCart(${product.id})">Додати в кошик</button>
         </div>
       </div>
     `;
+
+    // При клике на саму карточку товара — возвращаемся на каталог
+    const productCard = document.getElementById('productCard');
+    productCard.addEventListener('click', () => {
+      window.location.href = 'catalog.html';
+    });
   } else if (container) {
     container.innerHTML = '<p>Товар не знайден 😢</p>';
   }
 }
+
 /* ===== Хіти продажу на головній ===== */
 function renderBestSellers() {
   const best = PRODUCTS.slice(0, 5); // в хіти 5 товара

@@ -82,3 +82,4 @@ function finishOrder() {
 
 // ===== Запуск рендера корзины =====
 renderCheckoutCart();
+
