@@ -8,27 +8,7 @@
 body {
   background: #ffffff; /* как у каталога */
   color: #e6a2c1;
-  overflow-x: hidden;
-}
-
-/* 🌸 очень нежный фон с цветочками */
-body::before,
-body::after {
-  content: "🌸";
-  position: fixed;
-  font-size: 140px;
-  opacity: 0.04;
-  pointer-events: none;
-}
-
-body::before {
-  top: 80px;
-  left: 40px;
-}
-
-body::after {
-  bottom: 80px;
-  right: 40px;
+ 
 }
 
 /* ===== Верхняя панель ===== */
@@ -36,7 +16,7 @@ body::after {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #ffb8e0; /* как футер */
+  background: #ffb8e0;
   padding: 18px 40px;
   display: flex;
   justify-content: space-between;

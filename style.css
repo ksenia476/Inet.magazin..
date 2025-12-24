@@ -593,3 +593,24 @@ body {
   align-items: center;
 }
 
+.order-thanks {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  padding: 40px 25px;
+  background: #fff0f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(255, 111, 145, 0.2);
+}
+
+.order-thanks h2 {
+  color: #ff6f91;
+  margin-bottom: 20px;
+}
+
+.order-thanks h1 {
+  font-size: 36px;
+  color: #c46a8b;
+  margin: 10px 0 25px;
+}

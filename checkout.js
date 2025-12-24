@@ -60,7 +60,6 @@ function validateContacts() {
   }
 }
 
-// ===== Финальное оформление заказа =====
 function finishOrder() {
   if (CART.length === 0) {
     alert('Ваша корзина пуста!');
@@ -70,15 +69,14 @@ function finishOrder() {
   const orderId = Math.floor(100000 + Math.random() * 900000);
   localStorage.removeItem('lovely_cart');
 
-  document.body.innerHTML = `
-    <div style="max-width:500px;margin:80px auto;text-align:center;font-family:sans-serif">
-      <h2>Дякуємо за замовлення 💜</h2>
-      <p>Номер замовлення:</p>
-      <h1>#${orderId}</h1>
-      <a href="index.html" style="display:inline-block;margin-top:20px;padding:10px 20px;background:#ff6f91;color:#fff;text-decoration:none;border-radius:5px;">Повернутися на головну</a>
-    </div>
-  `;
+  // скрываем checkout
+  document.querySelector('.checkout-page').style.display = 'none';
+  // показываем благодарность
+  const thanksBlock = document.getElementById('orderThanks');
+  thanksBlock.style.display = 'block';
+  document.getElementById('thanksOrderId').textContent = `#${orderId}`;
 }
+
 
 // ===== Запуск рендера корзины =====
 renderCheckoutCart();
